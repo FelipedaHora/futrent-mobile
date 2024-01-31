@@ -14,6 +14,8 @@ class PrimaryTextField extends StatelessWidget {
   final Color prefixIconColor;
   final String? Function(String?)? validator;
   final IconButton? suffixIcon;
+  final TextStyle? floatingLabelStyle;
+  final Color? textInputColor;
 
   const PrimaryTextField({
     super.key,
@@ -30,6 +32,8 @@ class PrimaryTextField extends StatelessWidget {
     required this.prefixIconColor,
     this.validator,
     this.suffixIcon,
+    this.floatingLabelStyle,
+    this.textInputColor,
   });
 
   @override
@@ -38,6 +42,7 @@ class PrimaryTextField extends StatelessWidget {
       obscureText: obscureText,
       controller: controller,
       validator: validator,
+      style: TextStyle(color: textInputColor),
       decoration: InputDecoration(
         suffixIcon: suffixIcon,
         prefixIcon: icon,
@@ -47,6 +52,7 @@ class PrimaryTextField extends StatelessWidget {
         hintText: hintText,
         hintStyle: TextStyle(color: hintTextColor),
         labelText: labelText,
+        floatingLabelStyle: floatingLabelStyle,
         labelStyle: TextStyle(
           fontSize: 17.0,
           color: labelTextColor,

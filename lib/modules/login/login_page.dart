@@ -63,11 +63,13 @@ class _LoginPageState extends State<LoginPage> {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(30.0, 120.0, 30.0, 5.0),
                         child: PrimaryTextField(
+                          textInputColor: white,
                           borderColor: yellow,
                           fillColor: darkGreen,
                           focusColor: lightGreen,
                           prefixIconColor: yellow,
                           hintTextColor: yellow,
+                          floatingLabelStyle: const TextStyle().copyWith(fontSize: 14.0, color: white.withOpacity(0.8)),
                           labelTextColor: yellow,
                           hintText: 'Email ou nome de usuário',
                           labelText: 'Usuário',
@@ -80,11 +82,13 @@ class _LoginPageState extends State<LoginPage> {
                         padding: const EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 0.0),
                         child: Obx(
                           () => PrimaryTextField(
+                            textInputColor: white,
                             borderColor: yellow,
                             fillColor: darkGreen,
                             focusColor: lightGreen,
                             prefixIconColor: yellow,
                             hintTextColor: yellow,
+                            floatingLabelStyle: const TextStyle().copyWith(fontSize: 14.0, color: white.withOpacity(0.8)),
                             labelTextColor: yellow,
                             hintText: 'Senha',
                             labelText: 'Senha',
